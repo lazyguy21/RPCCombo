@@ -11,10 +11,13 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
+    //httpclient
     compile 'org.apache.httpcomponents:httpclient:4.5.2'
     compile 'org.apache.httpcomponents:fluent-hc:4.5.2'
     compile 'org.apache.httpcomponents:httpclient-cache:4.5.2'
     compile 'org.apache.httpcomponents:httpmime:4.5.2'
 
+    //cxf
+    compile 'org.apache.cxf:cxf-rt-frontend-jaxrs:3.1.6'
 
 }
