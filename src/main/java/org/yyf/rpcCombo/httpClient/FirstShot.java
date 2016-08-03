@@ -1,4 +1,4 @@
-package org.yyf.httpWs;
+package org.yyf.rpcCombo.httpClient;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;

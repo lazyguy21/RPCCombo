@@ -1,4 +1,4 @@
-package org.yyf.httpWs;
+package org.yyf.rpcCombo.httpClient;
 
 import java.util.ArrayList;
 import java.util.List;
