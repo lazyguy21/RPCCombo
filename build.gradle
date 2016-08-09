@@ -17,6 +17,10 @@ dependencies {
     compile 'org.apache.httpcomponents:httpclient-cache:4.5.2'
     compile 'org.apache.httpcomponents:httpmime:4.5.2'
 
+    //fastjson
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.15'
+
+
     //cxf
     compile 'org.apache.cxf:cxf-rt-frontend-jaxrs:3.1.6'
     compile 'org.apache.cxf:cxf-rt-transports-http-jetty:3.1.6'//jax单独发布的时候依赖ｊｅｔｔｙ
