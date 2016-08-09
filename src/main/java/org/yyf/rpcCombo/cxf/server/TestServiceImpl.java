@@ -28,7 +28,7 @@ public class TestServiceImpl implements TestService{
     public User echo2() {
         User user = new User();
         user.setId(11L);
-        user.setName("Tobi");
+        user.setName("小明明");
         user.setAge(10);
         user.setColor(Color.BLUE);
         user.setDate(new Date());
