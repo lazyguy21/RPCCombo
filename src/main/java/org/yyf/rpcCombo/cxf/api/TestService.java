@@ -1,10 +1,6 @@
 package org.yyf.rpcCombo.cxf.api;
 
-import org.yyf.rpcCombo.cxf.domain.CustomResponse;
 import org.yyf.rpcCombo.cxf.domain.User;
-
-import java.util.List;
-import java.util.Objects;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -26,11 +22,15 @@ public interface TestService {
     String echo();
 
     @Path("/user")
-    @GET
+    @POST
     @Produces(value = MediaType.APPLICATION_JSON)
     User echo2();
 
     @Path("/echoUser")
     @POST
     User echoUser(User user);
+
+    @Path("/timeEchoUser")
+    @POST
+    User timeEchoUser(User user);
 }

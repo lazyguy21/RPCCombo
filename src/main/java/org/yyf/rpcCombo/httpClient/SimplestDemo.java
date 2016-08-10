@@ -26,7 +26,6 @@ public class SimplestDemo {
             byteArrayToBean(entity);
 //            getHandsWet(entity);
 //            stringToBean(entity);
-
         } catch (IOException e) {
             e.printStackTrace();
         }

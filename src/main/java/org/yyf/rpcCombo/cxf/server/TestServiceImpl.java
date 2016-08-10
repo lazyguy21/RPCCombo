@@ -9,6 +9,7 @@ import org.yyf.rpcCombo.cxf.domain.User;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -26,6 +27,12 @@ public class TestServiceImpl implements TestService{
 
     @Override
     public User echo2() {
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         User user = new User();
         user.setId(11L);
         user.setName("小明明");
@@ -35,7 +42,7 @@ public class TestServiceImpl implements TestService{
         user.setIsGood(false);
         user.setMaps(null);
         user.setLists(new ArrayList<>());
-        System.out.println(user);
+        System.out.println(user+" "+Thread.currentThread().getId());
         return user;
     }
 
@@ -46,5 +53,14 @@ public class TestServiceImpl implements TestService{
 
     }
 
+    @Override
+    public User timeEchoUser(User user) {
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return user;
 
+    }
 }
