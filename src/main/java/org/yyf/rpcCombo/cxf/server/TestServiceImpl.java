@@ -48,7 +48,7 @@ public class TestServiceImpl implements TestService{
 
     @Override
     public User echoUser(User user) {
-
+        System.out.println(user);
         return user;
 
     }
