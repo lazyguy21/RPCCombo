@@ -1,26 +1,30 @@
 package org.yyf.rpcCombo.domain;
 
+import org.yyf.rpcCombo.serialize.fastJson.EnumDescription;
+
 /**
  * Created by tobi on 16-9-13.
  */
-public enum Color implements ChineseLabelEnum {
+public enum Color implements EnumDescription {
     RED("红"),
     GREEN("绿"),
     BLUE("蓝");
 
-    private String chineseLabel;
+    private String description;
 
-    Color(String chineseLabel) {
-        this.chineseLabel = chineseLabel;
+    Color(String description) {
+        this.description = description;
     }
 
-    @Override
-    public String getChineseLabel() {
-        return chineseLabel;
-    }
+
     @Override
     public String toString(){
-        return chineseLabel;
+        return description;
     }
 
+
+    @Override
+    public String getDescription() {
+        return description;
+    }
 }
